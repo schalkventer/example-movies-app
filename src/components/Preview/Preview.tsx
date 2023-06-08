@@ -9,6 +9,7 @@ const Image = styled.img`
 const Card = styled(Paper)<{ as: string }>`
   margin: 1rem 0;
   list-style: none;
+  min-height: 8rem;
 `;
 
 const StyledButtonBase = styled(ButtonBase)`
@@ -17,6 +18,7 @@ const StyledButtonBase = styled(ButtonBase)`
   align-items: center;
   text-align: left;
   width: 100%;
+  min-height: 8rem;
 
   &:hover {
     background: #007fff10;

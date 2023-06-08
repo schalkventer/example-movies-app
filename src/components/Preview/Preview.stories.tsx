@@ -1,6 +1,5 @@
 import { StoryObj, Meta } from "@storybook/react";
 import { Preview } from "./Preview";
-import { faker } from "@faker-js/faker";
 import { mocks } from "./Preview.mocks";
 
 const meta: Meta<Preview> = {

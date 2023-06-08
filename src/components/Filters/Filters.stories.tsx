@@ -1,13 +1,13 @@
 import { StoryObj, Meta } from "@storybook/react";
-import { Filters } from "./Filters";
+import { Presentation } from "./Filters.Presentation";
 
-const meta: Meta<Filters> = {
+const meta: Meta<Presentation> = {
   title: "components/Filters",
-  component: Filters,
+  component: Presentation,
 };
 
 export default meta;
 
-export const Basic: StoryObj<Filters> = {
+export const Basic: StoryObj<Presentation> = {
   args: {},
 };

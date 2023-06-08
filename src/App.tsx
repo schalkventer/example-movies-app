@@ -1,15 +1,15 @@
-import { useStore } from "zustand";
-import { createStore } from "./model";
-import { List } from "./components";
-import { createApi } from "./api";
-
-const api = createApi();
-const store = createStore(api);
+import { List } from "./components/List";
+import { Filters } from "./components/Filters";
+import { Single } from "./components/Single";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const App = () => {
-  const phase = useStore(store, (state) => state.phase);
-  const movies = useStore(store, (state) => state.list);
-
-  if (phase === "LOADING") return <div>Loading...</div>;
-  return <List movies={movies} />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/movie/:id" element={<Single />} />
+        <Route path="/" element={<List configuration={<Filters />} />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
